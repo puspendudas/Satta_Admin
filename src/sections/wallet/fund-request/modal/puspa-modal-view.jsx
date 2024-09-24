@@ -45,8 +45,8 @@ export default function PuspaModalView({ isOpen, onClose, viewData }) {
 
         <Box sx={{ p: 2 }}>
           <img
-            srcSet={`https://jackapi.kalyanjackpot.com/api/v1/misc/images?type=transaction&name=${viewData}`}
-            src={`https://jackapi.kalyanjackpot.com/api/v1/misc/images?type=transaction&name=${viewData}`}
+            srcSet={`https://matka.puspenduofficial.com/api/v1/misc/images?type=transaction&name=${viewData}`}
+            src={`https://matka.puspenduofficial.com/api/v1/misc/images?type=transaction&name=${viewData}`}
             alt={viewData}
             crossOrigin="anonymous"
             loading="lazy"

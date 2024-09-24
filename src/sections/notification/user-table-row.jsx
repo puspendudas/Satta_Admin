@@ -87,7 +87,7 @@ export default function UserTableRow({
 
         <TableCell data-label="Img">
           <img
-            src={`https://jackapi.kalyanjackpot.com/api/v1/misc/images?type=notification&name=${img}`}
+            src={`https://matka.puspenduofficial.com/api/v1/misc/images?type=notification&name=${img}`}
             alt={img}
             crossOrigin="anonymous"
             loading="lazy"
