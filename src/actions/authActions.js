@@ -3,7 +3,6 @@ import { saveAuthenticated, deleteAuthentication } from "src/utils/auth";
 export const signin = (saveData) => (dispatch) => {
   saveAuthenticated(saveData);
   // Dispatch login success action with payload
-  console.log("Mobile",saveData.data.type)
   dispatch({ type: 'LOGIN_SUCCESS', payload: saveData.data });
 
   // Make API call to authenticate user
@@ -22,7 +21,6 @@ export const signup = (credentials) => (dispatch) => {
 
 export const verified = (saveData) => (dispatch) => {
   saveAuthenticated(saveData);
-  console.log("verifiedMobile",saveData.data)
   // Dispatch signup success action with payload
   dispatch({ type: 'SIGNUP_SUCCESS', payload: saveData.data });
 

@@ -19,33 +19,30 @@ export const isAuthenticated = () => {
 };
 
 // Function to get user data 
-export const getUserData = () => {  
-  // Get the mobile from local storage
-  const mobile = localStorage.getItem('mobile');
-  return JSON.parse(mobile)
-}
+export const getUserData = () => {
+  const user = localStorage.getItem('user');
+  const role = localStorage.getItem('role'); // Retrieve the role
+  if (user && role) {
+    return { user: JSON.parse(user), role }; // Return both mobile and role
+  }
+  return null;
+};
 
 // Function to save token data into local storage
 export const saveAuthenticated = (data) => {
-  const token = data?.tokenData.token
-  const role = data?.data.type
-  // const mobile = data?.data.mobile
-  // Save the token into local storage
-  localStorage.setItem('token', token)
-  localStorage.setItem('role', role)
-  // Save the mobile into local storage
-  // localStorage.setItem('mobile', mobile)
-}
+  const token = data?.tokenData.token;
+  const role = data?.data.type;
+  const user = JSON.stringify(data?.data);
+  localStorage.setItem('token', token);
+  localStorage.setItem('role', role); // Save role to localStorage
+  localStorage.setItem('user', user); // Save role to localStorage
+};
 
 // Function to save token data into local storage
 export const deleteAuthentication = () => {
-  // const mobile = data?.data.mobile
-  // Save the token into local storage
-  localStorage.removeItem('token')
-  localStorage.removeItem('role')
-  // Save the mobile into local storage
-  // localStorage.setItem('mobile', mobile)
-}
+  localStorage.removeItem('token');
+  localStorage.removeItem('role'); // Remove the role
+};
 
 
 // Helper function to parse JWT token
