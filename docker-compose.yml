@@ -6,6 +6,10 @@ services:
     container_name: satta_admin
     ports:
     - "3030:3030/tcp"
+    labels:
+    - traefik.enable=true
+    - "traefik.http.routers.<unique_router_name>.rule=Host(`coolify.io`) && PathPrefix(`/`)"
+    - traefik.http.routers.<unique_router_name>.entryPoints=http
     # environment:
     # networks:
     #  myipvlan:
